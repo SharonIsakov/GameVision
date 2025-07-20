@@ -160,24 +160,7 @@
         section.classList.remove('active');
       });
       document.getElementById(id).classList.add('active');
-    }
-
-    // Initialize Tableau visualizations with error handling
-    document.addEventListener('DOMContentLoaded', function() {
-      const vizElements = document.querySelectorAll('tableau-viz');
-      vizElements.forEach(viz => {
-        try {
-          // No explicit initialization needed for Embedding API v3
-          console.log(`Tableau viz loaded: ${viz.getAttribute('src')}`);
-        } catch (error) {
-          console.error(`Failed to load Tableau viz: ${viz.getAttribute('src')}`, error);
-          const errorDiv = viz.nextElementSibling;
-          if (errorDiv && errorDiv.classList.contains('tableau-error')) {
-            errorDiv.style.display = 'block';
-          }
-        }
-      });
-    });
+    };
   </script>
 </body>
 </html>
